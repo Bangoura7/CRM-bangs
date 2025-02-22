@@ -3,7 +3,7 @@ services:
     name: rcm_b
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "pyton manage.py runserver"
+    startCommand: "pyton manage
     envVars:
       - key: DB_NAME
         value: db_gestionclient
@@ -16,6 +16,6 @@ services:
       - key: DB_PORT
         value: 5432
       - key: SECRET_KEY
-        value: ta_clé_secrète
+        value: django-insecure-4bpwnm6tca2e2j^ffb@jn+ej2q5)k3-42i@h8q*o1nwwb#o@3s
       - key: DEBUG
         value: False
