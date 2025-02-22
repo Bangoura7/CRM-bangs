@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: mon-projet-django
+    name: rcm_b
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "gunicorn mon_projet.wsgi:application"
+    startCommand: "pyton manage.py runserver"
     envVars:
       - key: DB_NAME
         value: db_gestionclient
