@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: mon-projet-django
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn mon_projet.wsgi:application"
+    envVars:
+      - key: DB_NAME
+        value: db_gestionclient
+      - key: DB_USER
+        value: bangoura
+      - key: DB_PASSWORD
+        value: nJyiY1zj9MHsMd2aDCMGks9Se9cPqrmE
+      - key: DB_HOST
+        value: dpg-cusu7mtumphs73ccvhkg-a.oregon-postgres.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: SECRET_KEY
+        value: ta_clé_secrète
+      - key: DEBUG
+        value: False
