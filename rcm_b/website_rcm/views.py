@@ -24,10 +24,16 @@ def home(request):
 
             return redirect('home')
         else:
-            messages.success(request, "Le nom ou le mots de passe n'existe pas dans votre systeme informatique")
-            
+            messages.success(request, "Le nom ou le mots de passe n'existe pas dans votre systeme informatique")        
     return render(request, 'home.html', {})
 
+
 def logout_user(request):
-    return render(request, 'logout.html', {})
+    logout(request)
+    messages.success(request, "Deconnection effectuée avec succès")
+    return redirect('home')
+
+def register_user(request):
+    
+    return render(request, 'register.html')
 
